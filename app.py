@@ -24,6 +24,7 @@ def main():
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
         }}
         .stButton>button {{
             font-size: 20px;
@@ -49,6 +50,9 @@ def main():
     if st.button("Changer la couleur de fond", key="color_button"):
         st.session_state['background_color'] = generate_random_color()
         st.rerun()
+
+    # Affichage de la vidéo
+    st.video("video.mp4")
 
 if __name__ == "__main__":
     main()
